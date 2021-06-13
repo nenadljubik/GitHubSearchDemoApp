@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		55EA9A7A2676155F00AE5782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EA9A782676155F00AE5782 /* Main.storyboard */; };
 		55EA9A7C2676156000AE5782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55EA9A7B2676156000AE5782 /* Assets.xcassets */; };
 		55EA9A7F2676156000AE5782 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EA9A7D2676156000AE5782 /* LaunchScreen.storyboard */; };
+		55EA9A87267632DE00AE5782 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EA9A86267632DE00AE5782 /* RepositoryTableViewCell.swift */; };
 		B664DAA5144126498FE3704B /* Pods_GitHubRepoSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8737F8A4A47BBCE330B101C9 /* Pods_GitHubRepoSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		55EA9A7B2676156000AE5782 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55EA9A7E2676156000AE5782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55EA9A802676156000AE5782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55EA9A86267632DE00AE5782 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		85927D8044C37DDF5C09FFD5 /* Pods-GitHubRepoSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubRepoSearch.release.xcconfig"; path = "Target Support Files/Pods-GitHubRepoSearch/Pods-GitHubRepoSearch.release.xcconfig"; sourceTree = "<group>"; };
 		8737F8A4A47BBCE330B101C9 /* Pods_GitHubRepoSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubRepoSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30B6F2F5633BE0D6269AB06 /* Pods-GitHubRepoSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubRepoSearch.debug.xcconfig"; path = "Target Support Files/Pods-GitHubRepoSearch/Pods-GitHubRepoSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -56,7 +58,6 @@
 				B30B6F2F5633BE0D6269AB06 /* Pods-GitHubRepoSearch.debug.xcconfig */,
 				85927D8044C37DDF5C09FFD5 /* Pods-GitHubRepoSearch.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,6 +85,7 @@
 				55EA9A722676155F00AE5782 /* AppDelegate.swift */,
 				55EA9A742676155F00AE5782 /* SceneDelegate.swift */,
 				55EA9A762676155F00AE5782 /* ViewController.swift */,
+				55EA9A86267632DE00AE5782 /* RepositoryTableViewCell.swift */,
 				55EA9A782676155F00AE5782 /* Main.storyboard */,
 				55EA9A7B2676156000AE5782 /* Assets.xcassets */,
 				55EA9A7D2676156000AE5782 /* LaunchScreen.storyboard */,
@@ -209,6 +211,7 @@
 				55EA9A772676155F00AE5782 /* ViewController.swift in Sources */,
 				55EA9A732676155F00AE5782 /* AppDelegate.swift in Sources */,
 				55EA9A752676155F00AE5782 /* SceneDelegate.swift in Sources */,
+				55EA9A87267632DE00AE5782 /* RepositoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
