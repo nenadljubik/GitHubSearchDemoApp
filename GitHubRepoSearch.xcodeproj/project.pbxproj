@@ -10,6 +10,8 @@
 		55A37D0A26768C54006071B6 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A37D0926768C54006071B6 /* ApiManager.swift */; };
 		55A37D0C26768C5A006071B6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A37D0B26768C5A006071B6 /* Router.swift */; };
 		55A37D0E26768C62006071B6 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A37D0D26768C62006071B6 /* NetworkConstants.swift */; };
+		55A37D112676930D006071B6 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A37D102676930D006071B6 /* Repository.swift */; };
+		55A37D142676958C006071B6 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A37D132676958C006071B6 /* Utilities.swift */; };
 		55EA9A732676155F00AE5782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EA9A722676155F00AE5782 /* AppDelegate.swift */; };
 		55EA9A752676155F00AE5782 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EA9A742676155F00AE5782 /* SceneDelegate.swift */; };
 		55EA9A772676155F00AE5782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EA9A762676155F00AE5782 /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 		55A37D0926768C54006071B6 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		55A37D0B26768C5A006071B6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		55A37D0D26768C62006071B6 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		55A37D102676930D006071B6 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		55A37D132676958C006071B6 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		55EA9A6F2676155F00AE5782 /* GitHubRepoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubRepoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55EA9A722676155F00AE5782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55EA9A742676155F00AE5782 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,14 @@
 			path = NetworkManager;
 			sourceTree = "<group>";
 		};
+		55A37D1226769313006071B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55A37D102676930D006071B6 /* Repository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		55EA9A662676155F00AE5782 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +114,8 @@
 				55EA9A742676155F00AE5782 /* SceneDelegate.swift */,
 				55EA9A762676155F00AE5782 /* ViewController.swift */,
 				55EA9A86267632DE00AE5782 /* RepositoryTableViewCell.swift */,
+				55A37D132676958C006071B6 /* Utilities.swift */,
+				55A37D1226769313006071B6 /* Model */,
 				55A37D0F267691DB006071B6 /* NetworkManager */,
 				55EA9A782676155F00AE5782 /* Main.storyboard */,
 				55EA9A7B2676156000AE5782 /* Assets.xcassets */,
@@ -228,8 +242,10 @@
 				55A37D0E26768C62006071B6 /* NetworkConstants.swift in Sources */,
 				55EA9A772676155F00AE5782 /* ViewController.swift in Sources */,
 				55EA9A732676155F00AE5782 /* AppDelegate.swift in Sources */,
+				55A37D112676930D006071B6 /* Repository.swift in Sources */,
 				55A37D0A26768C54006071B6 /* ApiManager.swift in Sources */,
 				55EA9A752676155F00AE5782 /* SceneDelegate.swift in Sources */,
+				55A37D142676958C006071B6 /* Utilities.swift in Sources */,
 				55A37D0C26768C5A006071B6 /* Router.swift in Sources */,
 				55EA9A87267632DE00AE5782 /* RepositoryTableViewCell.swift in Sources */,
 			);
@@ -389,7 +405,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nenadLjubik.GitHubRepoSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -409,7 +425,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nenadLjubik.GitHubRepoSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
