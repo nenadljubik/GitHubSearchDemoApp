@@ -143,7 +143,7 @@ extension ViewController {
                 }
                 self?.parseReposResponse(repos: repos)
             } else {
-
+                Utilities.sharedInstance.presentAlertWith(on: self, with: responseData?["message"] as? String ?? "Some error happened. Try again")
             }
             self?.activityIndicator.stopAnimating()
         }

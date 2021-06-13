@@ -50,10 +50,10 @@ class Utilities {
         return textField
     }
 
-    func presentAlertWith(on viewController: UIViewController, with title: String) {
+    func presentAlertWith(on viewController: UIViewController?, with title: String) {
         let alert = UIAlertController(title: title, message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
 
-        viewController.present(alert, animated: true, completion: nil)
+        viewController?.present(alert, animated: true, completion: nil)
     }
 }
