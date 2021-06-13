@@ -6,5 +6,6 @@ target 'GitHubRepoSearch' do
   use_frameworks!
 
   # Pods for GitHubRepoSearch
+pod 'SnapKit'
 
 end
