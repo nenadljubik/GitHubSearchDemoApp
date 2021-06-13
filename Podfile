@@ -7,5 +7,6 @@ target 'GitHubRepoSearch' do
 
   # Pods for GitHubRepoSearch
 pod 'SnapKit'
+pod 'Alamofire'
 
 end
