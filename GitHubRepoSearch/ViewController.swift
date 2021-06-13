@@ -61,6 +61,7 @@ final class ViewController: UIViewController {
 // MARK: - UITextField Delegate Methods
 extension ViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
+        getRepos(with: textField.text ?? "")
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -86,3 +87,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: - API Communication
+extension ViewController {
+
+    // Getting Repos With Specific Query
+    func getRepos(with query: String) {
+        ApiManager.sharedInstance.getRepos(with: query) { success, responseData, statusCode in
+            if success {
+
+            } else {
+
+            }
+        }
+    }
+}
