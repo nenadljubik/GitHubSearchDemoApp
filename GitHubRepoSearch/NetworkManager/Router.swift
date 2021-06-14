@@ -22,7 +22,7 @@ enum Router: URLRequestConvertible {
     var path: String {
         switch self {
         case .GetRepos(let query):
-            return Constant.Network.baseUrl + Constant.Network.Endpoints.searchRepos + "?q=\(query)"
+            return (Constant.Network.baseUrl + Constant.Network.Endpoints.searchRepos + "?q=\(query)").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? Constant.Network.baseUrl + Constant.Network.Endpoints.searchRepos
         }
     }
 
@@ -31,6 +31,12 @@ enum Router: URLRequestConvertible {
         default:
             return [:]
         }
+    }
+
+    var header : [String: String] {
+        return [
+            "Content-Type" : "application/json"
+        ]
     }
 
     func asURLRequest() throws -> URLRequest {
@@ -43,6 +49,7 @@ enum Router: URLRequestConvertible {
             urlRequest.httpBody = try JSONSerialization.data(withJSONObject: self.parameters, options: .prettyPrinted)
         }
 
+        urlRequest.allHTTPHeaderFields = header
         return urlRequest
     }
 }
