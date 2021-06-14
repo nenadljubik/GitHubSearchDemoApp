@@ -135,17 +135,21 @@ extension ViewController {
 
     // Getting Repos With Specific Query
     func getRepos(with query: String) {
-        activityIndicator.startAnimating()
-        ApiManager.sharedInstance.getRepos(with: query) { [weak self] success, responseData, statusCode in
-            if success {
-                guard let repos = responseData?["items"] as? [[String:Any]] else {
-                    return
+        if Utilities.sharedInstance.hasInternetConnection() {
+            activityIndicator.startAnimating()
+            ApiManager.sharedInstance.getRepos(with: query) { [weak self] success, responseData, statusCode in
+                if success {
+                    guard let repos = responseData?["items"] as? [[String:Any]] else {
+                        return
+                    }
+                    self?.parseReposResponse(repos: repos)
+                } else {
+                    Utilities.sharedInstance.presentAlertWith(on: self, with: responseData?["message"] as? String ?? "Some error happened. Try again")
                 }
-                self?.parseReposResponse(repos: repos)
-            } else {
-                Utilities.sharedInstance.presentAlertWith(on: self, with: responseData?["message"] as? String ?? "Some error happened. Try again")
+                self?.activityIndicator.stopAnimating()
             }
-            self?.activityIndicator.stopAnimating()
+        } else {
+            Utilities.sharedInstance.presentAlertWith(on: self, with: "No Internet Connection")
         }
     }
 }

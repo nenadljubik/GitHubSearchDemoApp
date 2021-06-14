@@ -50,10 +50,16 @@ class Utilities {
         return textField
     }
 
+    // MARK:- Presenting Alert With Title
     func presentAlertWith(on viewController: UIViewController?, with title: String) {
         let alert = UIAlertController(title: title, message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
 
         viewController?.present(alert, animated: true, completion: nil)
+    }
+
+    //MARK: - Checking For Internet Connection
+    func hasInternetConnection() -> Bool {
+        return Reachability.sharedInstance.isInternetAvailable()
     }
 }
